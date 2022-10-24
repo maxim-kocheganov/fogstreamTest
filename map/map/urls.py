@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from convertCSV.views import uploadCSV
+from home.views import homeView
 
 urlpatterns = [
+    path('', homeView),
     path('admin/', admin.site.urls),
     path('uploadCSV/',  uploadCSV)
 ]
